@@ -21,3 +21,15 @@ class Vehicle:
             self.__rental_price_per_day = new_price
         else:
             print("Invalid price it should be greater than zero")
+
+
+class Bike(Vehicle):
+    def __init__(self, brand, model, year, rental_price_per_day, engine_capacity):
+        super().__init__(brand, model, year, rental_price_per_day)
+        self.engine_capacity = engine_capacity
+
+    def display_info(self):
+        super().display_info() 
+        print(f"Engine: {self.engine_capacity}cc")
+
+    
