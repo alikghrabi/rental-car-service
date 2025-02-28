@@ -43,4 +43,23 @@ class Car(Vehicle):
         print(f"Seats: {self.seating_capacity}")
 
 
+def show_vehicle_info(vehicle):
+    vehicle.display_info()
 
+
+# Creating instances
+
+car = Car("Toyota", "Corolla", 2020, 50, 5)
+bike = Bike("Yamaha", "R1", 2019, 30, 998)
+
+# Displayings details
+show_vehicle_info(car)
+show_vehicle_info(bike)
+
+# Calculate rental cost
+print(f"\nRental cost for {car.brand} {car.model} for 3 days: ${car.calculate_rental_cost(3)}")
+print(f"Rental cost for {bike.brand} {bike.model} for 5 days: ${bike.calculate_rental_cost(5)}")
+
+# Modify rental price
+car.set_rental_price_per_day(55)
+print(f"\nUpdated rental price for {car.brand} {car.model}: ${car.get_rental_price_per_day()}/day")
